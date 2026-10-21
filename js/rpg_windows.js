@@ -4244,7 +4244,7 @@ Window_Message.prototype.constructor = Window_Message;
 
 Window_Message.prototype.initialize = function() {
     var width = this.windowWidth();
-    var height = this.windowHeight();
+    var height = this.windowHeight() + 20;
     var x = (Graphics.boxWidth - width) / 2;
     Window_Base.prototype.initialize.call(this, x, 0, width, height);
     this.openness = 0;
@@ -4478,7 +4478,7 @@ Window_Message.prototype.newPage = function(textState) {
     this.clearFlags();
     this.loadMessageFace();
     textState.x = this.newLineX() + 38;
-    textState.y = 15;
+    textState.y = 0;
     textState.left = this.newLineX() + 38;
     textState.height = this.calcTextHeight(textState, false);
 };
