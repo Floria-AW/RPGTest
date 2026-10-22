@@ -4477,9 +4477,9 @@ Window_Message.prototype.newPage = function(textState) {
     this.resetFontSettings();
     this.clearFlags();
     this.loadMessageFace();
-    textState.x = this.newLineX() + 45;
+    textState.x = this.newLineX() + 50;
     textState.y = 0;
-    textState.left = this.newLineX() + 45;
+    textState.left = this.newLineX() + 50;
     textState.height = this.calcTextHeight(textState, false);
 };
 
