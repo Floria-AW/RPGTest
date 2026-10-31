@@ -1,6 +1,6 @@
 [
 null,
-{"id":1,"expanded":false,"name":"黑屏","order":1,"parentId":0,"scrollX":886.5,"scrollY":613},
+{"id":1,"expanded":false,"name":"黑屏","order":1,"parentId":0,"scrollX":499,"scrollY":614.5},
 {"id":2,"expanded":false,"name":"行走图测试","order":2,"parentId":0,"scrollX":886.5,"scrollY":613},
-{"id":3,"expanded":false,"name":"地图测试","order":3,"parentId":0,"scrollX":886.5,"scrollY":613}
+{"id":3,"expanded":false,"name":"地图测试","order":3,"parentId":0,"scrollX":499.5,"scrollY":613.5}
 ]
