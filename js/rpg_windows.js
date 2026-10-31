@@ -4477,12 +4477,23 @@ Window_Message.prototype.newPage = function(textState) {
     this.resetFontSettings();
     this.clearFlags();
     this.loadMessageFace();
-    textState.x = this.newLineX() + 50;
+    textState.x = this.newLineX() + 50; 
     textState.y = 0;
     textState.left = this.newLineX() + 50;
+    textState.width = this.contentsWidth() - 50; 
     textState.height = this.calcTextHeight(textState, false);
 };
 
+Window_Message.prototype.processNormalCharacter = function(textState) {
+    var c = textState.text[textState.index++];
+    var w = this.textWidth(c);
+    if (textState.x + w > textState.left + textState.width) {
+        this.processNewLine(textState);
+    }
+    
+    this.contents.drawText(c, textState.x, textState.y, w * 2, textState.height);
+    textState.x += w;
+};
 Window_Message.prototype.loadMessageFace = function() {
     this._faceBitmap = ImageManager.reserveFace($gameMessage.faceName(), 0, this._imageReservationId);
 };
